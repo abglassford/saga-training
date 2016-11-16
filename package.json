@@ -2,9 +2,9 @@
   "name": "saga_training",
   "version": "1.0.0",
   "scripts": {
-    "lint": "eslint .",
     "build": "webpack",
     "start": "webpack-dev-server",
+    "start-server": "json-server db.json",
     "test": " echo \"tests pass cause there are none! :)\"; exit"
   },
   "author": "Kevin Durbin <kevindurb@gmail.com>",
@@ -26,6 +26,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.3.0",
     "history": "^4.4.0",
+    "json-server": "^0.9.0",
     "mocha": "^3.1.2",
     "ramda": "^0.22.1",
     "react": "^15.3.2",
