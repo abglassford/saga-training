@@ -1,0 +1,8 @@
+# IGNORE
+node_modules
+dist/*
+*.log
+
+# BUT NOT...
+!dist/.gitkeep
+!dist/index.html
