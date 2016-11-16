@@ -21,6 +21,10 @@ class App extends Component {
   }
 
   componentWillMount() {
+    this.props.dispatch({ type: 'GET_ALL_THE_THINGS' });
+  }
+
+  refreshUsers() {
     this.props.dispatch({ type: 'GET_USERS' });
   }
 
@@ -33,6 +37,9 @@ class App extends Component {
   render() {
     return (
       <div>
+        <button onClick={() => this.refreshUsers()}>
+          REFRESH
+        </button>
         {this.renderUsers()}
       </div>
     );
