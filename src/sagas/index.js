@@ -10,13 +10,14 @@ function* getTodos() {
 }
 
 function* getUsers() {
-  const result = yield call(api.get, `${BASE_URL}/users`);
-
-  yield delay(1000)
-
-  yield put(storeUsers(result.data));
-
-  return result.data;
+  try {
+    const result = yield call(api.get, `${BASE_URL}/users`);
+    yield delay(1000)
+    yield put(storeUsers(result.data));
+    return result.data;
+  } catch(e) {
+    return [];
+  }
 }
 
 function* getAllTheThings() {
